@@ -26,7 +26,7 @@ jobs:
         run: |
           cd ..;
           ls;
-        # cp -rf ../Portfolio/out/* .
+          cp -rf ../University/Portfolio/out/* .
 
       - name: git commands
         run: |
