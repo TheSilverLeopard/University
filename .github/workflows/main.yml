@@ -21,6 +21,7 @@ jobs:
         with:
           repository: TheSilverLeopard/Portfolio
           path: portfolio
+          token: ${{ secrets.ACTION_TOKEN }}
 
       - name: Copy
         run: |
