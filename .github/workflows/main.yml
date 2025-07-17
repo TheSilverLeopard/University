@@ -31,7 +31,9 @@ jobs:
         env:
             GH_TOKEN: ${{ secrets.ACTION_TOKEN }}
         run: |
-          cd ./portfolio; 
+          cd ./portfolio;
+          git config user.name "TheSilverLeopard";
+          git config user.email "jeb.jug@gmail.com";
           git add .;
           git commit -m "update";
           git push origin HEAD;
