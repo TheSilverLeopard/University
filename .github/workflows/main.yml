@@ -1,0 +1,33 @@
+name: Copy File
+run-name: ${{ github.workflow }} run by ${{ github.actor }}
+on:
+  push:
+    branches:
+      - main
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the my_org/repo_a repo
+        uses: actions/checkout@v4
+        with:
+          repository: 'TheSilverLeopard/University'
+          path: 'Portfolio/out'
+          
+      - name: Checkout the my_org/repo_b repo
+        uses: actions/checkout@v4
+        with:
+          repository: 'TheSilverLeopard/Portfolio'
+          path: '*'
+
+      - name: copy foo.txt from repo_a to repo_b
+        run: cp University/Portfolio/out/* Portfolio
+
+      - name: git commands
+        run: |
+          cd Portfolio; 
+          git config user.name "TheSilverLeopard";
+          git config user.email "jeb.jug@gmail.com";
+          git add .;
+          git commit -m "update";
+          git push origin HEAD;
