@@ -1,9 +1,12 @@
+
+
 name: Copy File
 run-name: ${{ github.workflow }} run by ${{ github.actor }}
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 jobs:
   copy-file:
     runs-on: ubuntu-latest
