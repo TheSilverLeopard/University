@@ -1,4 +1,4 @@
-name: Copy File
+name: Copy Files
 run-name: ${{ github.workflow }} run by ${{ github.actor }}
 on:
   push:
