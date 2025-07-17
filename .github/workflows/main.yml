@@ -1,34 +1,36 @@
-
-
 name: Copy File
 run-name: ${{ github.workflow }} run by ${{ github.actor }}
 on:
   push:
     branches:
-      - main
+      - projects
   workflow_dispatch:
 jobs:
   copy-file:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the my_org/repo_a repo
+      - name: Checkout projects repo
         uses: actions/checkout@v4
         with:
-          repository: 'TheSilverLeopard/University'
-          path: 'Portfolio/out'
-          
-      - name: Checkout the my_org/repo_b repo
+          path: projects
+      
+      - name: Checkout portfolio repo
         uses: actions/checkout@v4
         with:
-          repository: 'TheSilverLeopard/Portfolio'
-          path: '*'
+          repository: TheSilverLeopard/Portfolio
+          path: portfolio
+          token: ${{ secrets.ACTION_TOKEN }}
 
-      - name: copy foo.txt from repo_a to repo_b
-        run: cp University/Portfolio/out/* Portfolio
-
-      - name: git commands
+      - name: Copy files
         run: |
-          cd Portfolio; 
+          ls;
+          cp -rf ./projects/Portfolio/out/* ./portfolio;
+
+      - name: Commit and push
+        env:
+            GH_TOKEN: ${{ secrets.ACTION_TOKEN }}
+        run: |
+          cd ./portfolio;
           git config user.name "TheSilverLeopard";
           git config user.email "jeb.jug@gmail.com";
           git add .;
