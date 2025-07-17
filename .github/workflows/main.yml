@@ -24,7 +24,8 @@ jobs:
 
       - name: Copy
         run: |
-          cp -rf ./projects/Portfolio/out/* ./portfolio
+          ls;
+          cp -rf ./projects/Portfolio/out/* ./portfolio;
 
       - name: git commands
         run: |
