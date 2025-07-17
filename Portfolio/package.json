@@ -7,9 +7,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build"
-    //"deploy": "gh-pages -d out -repo https://github.com/TheSilverLeopard/Portfolio.git"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "15.4.1",
