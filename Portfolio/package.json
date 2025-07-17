@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build"
+    //"deploy": "gh-pages -d out -repo https://github.com/TheSilverLeopard/Portfolio.git"
   },
   "dependencies": {
     "next": "15.4.1",
