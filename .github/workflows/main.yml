@@ -11,20 +11,19 @@ jobs:
   copy-file:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the my_org/repo_a repo
+      - name: Checkout thsi repo
         uses: actions/checkout@v4
         with:
-          repository: 'TheSilverLeopard/University'
-          path: 'Portfolio/out'
-          
-      - name: Checkout the my_org/repo_b repo
+          path: Portfolio/out
+      
+      - name: Checkout other repo
         uses: actions/checkout@v4
         with:
-          repository: 'TheSilverLeopard/Portfolio'
-          path: '*'
+          repository: TheSilverLeopard/Portfolio
+          path: portfolio
 
-      - name: copy foo.txt from repo_a to repo_b
-        run: cp University/Portfolio/out/* Portfolio
+      - name: Copy
+        run: cp -rf ../Portfolio/out/* .
 
       - name: git commands
         run: |
