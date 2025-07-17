@@ -23,7 +23,7 @@ jobs:
 
       - name: Copy files
         run: |
-          rm -r *
+          rm -r ./portfolio/*
           cp -rf ./projects/Portfolio/out/* ./portfolio;
 
       - name: Commit and push
