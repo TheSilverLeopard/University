@@ -24,9 +24,8 @@ jobs:
 
       - name: Copy
         run: |
-          cd ..;
           ls;
-          cp -rf ../University/Portfolio/out/* .
+        #cp -rf ./University/Portfolio/out/* .
 
       - name: git commands
         run: |
