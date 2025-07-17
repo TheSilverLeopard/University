@@ -14,7 +14,7 @@ jobs:
       - name: Checkout this repo
         uses: actions/checkout@v4
         with:
-          path: Portfolio/out
+          path: projects
       
       - name: Checkout other repo
         uses: actions/checkout@v4
@@ -24,8 +24,7 @@ jobs:
 
       - name: Copy
         run: |
-          ls;
-        #cp -rf ./University/Portfolio/out/* .
+          cp -rf ./projects/Portfolio/out/* ./portfolio
 
       - name: git commands
         run: |
