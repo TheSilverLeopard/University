@@ -1,15 +1,8 @@
 {
-<<<<<<< HEAD
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thesilverleopard.github.io/portfolio",
-=======
-  "name": "project-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://thesilverleopard.github.io/University",
->>>>>>> 1f0191f027f0923a6d20c583e3b7b0c1fbda73ca
+  "homepage": "https://thesilverleopard.github.io/Portfolio",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
