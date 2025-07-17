@@ -11,7 +11,7 @@ jobs:
   copy-file:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout thsi repo
+      - name: Checkout this repo
         uses: actions/checkout@v4
         with:
           path: Portfolio/out
@@ -23,7 +23,10 @@ jobs:
           path: portfolio
 
       - name: Copy
-        run: cp -rf ../Portfolio/out/* .
+        run: |
+          cd ..;
+          ls;
+        # cp -rf ../Portfolio/out/* .
 
       - name: git commands
         run: |
