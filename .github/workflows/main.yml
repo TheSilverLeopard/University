@@ -29,9 +29,9 @@ jobs:
 
       - name: git commands
         run: |
-          cd Portfolio; 
+          cd ./portfolio; 
           git config user.name "TheSilverLeopard";
           git config user.email "jeb.jug@gmail.com";
           git add .;
           git commit -m "update";
-          git push origin HEAD;
+          git push portfolio HEAD;
