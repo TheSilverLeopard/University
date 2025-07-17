@@ -32,7 +32,6 @@ jobs:
           cd ./portfolio; 
           git config user.name "TheSilverLeopard";
           git config user.email "jeb.jug@gmail.com";
-          git remote -v;
           git add .;
           git commit -m "update";
-          git push portfolio HEAD;
+          git push origin HEAD;
