@@ -5,7 +5,7 @@ run-name: ${{ github.workflow }} run by ${{ github.actor }}
 on:
   push:
     branches:
-      - main
+      - projects
   workflow_dispatch:
 jobs:
   copy-file:
