@@ -1,0 +1,5 @@
+.RData
+*.RHistory
+.idea
+
+/__pycache__
