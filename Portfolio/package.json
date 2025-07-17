@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build"
+    "deploy": "next build && \"\">out/.nojekyll"
   },
   "dependencies": {
     "next": "15.4.1",
